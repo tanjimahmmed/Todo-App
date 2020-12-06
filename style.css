@@ -1,0 +1,167 @@
+/*
+===========
+app: Todo List
+Language: JavaScript
+Create By: Md Tanjim Ahmmed
+Create Date: 6 Dec 2020
+================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+body {
+    background-image: -o-linear-gradient(330deg,#cc2b5e,#753a88);
+    background-image: linear-gradient(120deg, #cc2b5e,#753a88);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 20px;
+    padding-top: 8rem;
+}
+
+header, form {
+    min-height: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+form input, form button {
+    padding: 12px;
+    font-size: 26px;
+    border: none;
+    background: #fff;
+}
+
+form button {color: #753a88;background: #fff;cursor: pointer;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s ease;transition: all 0.3s ease;}
+
+form button:hover {
+    background: #753a88;
+    color: #fff;
+}
+
+form input:focus {
+    outline: none;
+}
+
+.todo_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.todo_list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 10px;
+    background: #fff;
+    color: #000;
+    font-size: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+} 
+
+.todo li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+
+.complete_btn, .trash_btn {
+    background: #cc2b5e;
+    color: #fff;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.complete_btn {
+    background: #28a745;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.todo_item {
+    padding: 0 10px;
+}
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    -webkit-transform: translateY(8rem) rotateZ(20deg);
+    -moz-transform: translateY(8rem) rotateZ(20deg);
+    -ms-transform: translateY(8rem) rotateZ(20deg);
+    -o-transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #cc2b5e;
+    width: 12rem;
+    cursor: pointer;
+    padding: 17px;
+    font-size: 20px;
+}
+
+.select {
+    margin: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after {content: '\25BC';position: absolute;background: #cc2b5e;top: 0;right: 0;padding: 16px;pointer-events: none;-webkit-transition: all 0.3s ease;-o-transition: all 0.3s ease;transition: all 0.3s ease;}
+
+.select:hover::after {
+    background: #fff;
+    color: #cc2b5e;
+}
+
+.complete_btn:focus, .trash_btn:focus, button {
+    outline: none;
+}
